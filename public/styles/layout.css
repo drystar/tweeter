@@ -25,6 +25,15 @@ body {
   font-family: 'Bungee', sans-serif;
 }
 
+main {
+  width: 90%;
+  position: absolute;
+  text-align: center;
+  padding-top: 0;
+  margin: auto;
+  background-color: #f4f1ec;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
