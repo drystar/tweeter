@@ -1,0 +1,34 @@
+<form id='new-tweet' action=/new-tweet method='POST'>
+  <textarea id = 'tweet-input' rows='1'name='text' placeholder='What are you humming about?'></textarea>
+  <input id='tweet-button' type='submit' value='tweet'>
+  <span id='word-counter'>140</span>
+
+new-tweet {
+  position: relative;
+  width: 100%;
+  margin: auto
+}
+
+textarea {
+  background-color: rgb(255, 245, 240);
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+
+}
+
+textarea::placeholder {
+  color: black;
+}
+
+input {
+  
+}
+
+span counter {
+  font-family: 'Bungee', sans-serif;
+  color: brown;
+  float: right;
+
+
+}
+
