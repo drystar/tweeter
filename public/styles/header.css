@@ -10,24 +10,20 @@ header {
 
 
 header img {
-  position: relative;
+  position: absolute;
   width: 250px;
   height: 250px;
-  left: 40%;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 
 
 header h2 {
   position: absolute;
-  width: 500px;
-  left: 43%;
-  top: 55%;
-  
-  
-  /* height: 250px;
-  margin: 0;
-  margin-left: 50%;
-  top: 60% */
-
-
+  text-align: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 50%
 }
