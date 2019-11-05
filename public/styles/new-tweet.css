@@ -10,10 +10,18 @@ new-tweet {
 }
 
 textarea {
+  border: 0 solid black;
+  box-sizing: border-box;
   background-color: rgb(255, 245, 240);
+  display: inline;
   font-family: 'Source Sans Pro', sans-serif;
-  width: 100%;
-
+  /* width: 100%; */
+  /* margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px; */
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 textarea::placeholder {
@@ -21,14 +29,19 @@ textarea::placeholder {
 }
 
 input {
-  
+  background-color: coral;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #ffffff;
+  margin-top: 12px;
 }
 
 span counter {
+  border: 0 solid black;
+  box-sizing: border-box;
+  color: blueviolet;
+  display: inline;
   font-family: 'Bungee', sans-serif;
-  color: brown;
-  float: right;
-
-
-}
+  white-space: pre-wrap;
+  word-break: break-word; 
+  }
 
