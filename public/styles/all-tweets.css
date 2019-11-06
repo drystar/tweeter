@@ -18,8 +18,8 @@ article.tweet {
   background-color: blanchedalmond;
  }
 
- article.tweet.hover {
-   box-shadow: 10px 10px #4674ab;
+ article.tweet:hover {
+   box-shadow: 3px 2px 10px 4px #4674ab;
    opacity: 1;
    cursor: pointer;
  }
@@ -40,7 +40,7 @@ article.tweet {
   right: 80px;
 }
 
-article.tweet h4 {
+article.tweet header h4 {
   position: relative;
   color:#0e0d0d;
   background-color: blanchedalmond;
@@ -74,21 +74,21 @@ article.tweet footer {
   color:#0e0d0d;
   margin-right: 10px;
   margin-left: 10px;
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
  }
 
  article.tweet footer p {
   font-size: 15px;
   color:#0e0d0d;
   margin: 10px;
+  float: left;
  }
 
  article.tweet footer h4 {
   font-size: 15px;
   color:#0e0d0d;
   margin: 10px;
-  left: 430px;
-  top: 0px;
+  float: right;
  }
 

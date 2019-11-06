@@ -32,11 +32,11 @@ input {
   font-family: 'Source Sans Pro', sans-serif;
   color: blanchedalmond;
   padding: 10px;
-  margin-top: 12px;
+  margin-top: -1px;
 }
 
 span.counter {
-  float: left;
+  float: right;
   font-family: 'Bungee', sans-serif;
   
   }
