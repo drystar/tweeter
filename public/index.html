@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/all-tweets.css" type="text/css" />
     
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -38,39 +39,81 @@
       </div>
       <br>
       <div>
-          <h2>Your Name</h2>
+          <h2>drystar</h2>
       </div>
   </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
      <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form>
+     
+      <form action="/tweets/" method="POST"> 
         <textarea name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
         <span class="counter">140</span>
       </form>
     </section>
 
+    <!-- Tweets -->
+  
+    <section class="all tweets">
+      <article class="tweet">
+        <header class>
+          <img src class ="/images/profile-hex.png">
+          <h4 class="tweet-avatar">Newton</h4>
+          <p class="tweet-handle">@SirIsaac</p>
+        </header>
+        <p class="tweet-body">Today is Wednesday.Today is Wednesday.Today is Wednesday.</p> 
+        <footer class="tweet-footer">
+          <p class="time Stamp">Today</p>
+          <h4 class="tweet-icons">Pin|Retweet|Heart</h4>
+        </footer>
+      </article>
+
+      <article class="tweet">
+          <header class>
+            <img src class ="/images/profile-hex.png">
+            <h4 class="tweet-avatar">Newton</h4>
+            <p class="tweet-handle">@SirIsaac</p>
+          </header>
+          <p class="tweet-body">Today is Tuesday. Today is Tuesday. Today is Tuesday</p> 
+          <footer class="tweet-footer">
+            <p class="time Stamp">1day ago</p>
+            <h4 class="tweet-icons">Pin|Retweet|Heart</h4>
+          </footer>
+        </article>
+
+        <article class="tweet">
+            <header class>
+              <img src class ="/images/profile-hex.png">
+              <h4 class="tweet-avatar">Newton</h4>
+              <p class="tweet-handle">@SirIsaac</p>
+            </header>
+            <p class="tweet-body">Today is Monday. Today is Monday. Today is Monday</p> 
+            <footer class="tweet-footer">
+              <p class="time Stamp">2days ago</p>
+              <h4 class="tweet-icons">Pin|Retweet|Heart</h4>
+            </footer>
+          </article>
+
+      </section>
+
+    <p> Today is Monday. Today is Monday. Today is Monday</p>
+    <p> Today is Monday. Today is Monday. Today is Monday</p>
+    <p> Today is Monday. Today is Monday. Today is Monday</p>
+    <p> Today is Monday. Today is Monday. Today is Monday</p>
+    <p> Today is Monday. Today is Monday. Today is Monday</p>
+    <p> Today is Monday. Today is Monday. Today is Monday</p>
+    <p> Today is Monday. Today is Monday. Today is Monday</p>
+    <p> Today is Monday. Today is Monday. Today is Monday</p>
+    <p> Today is Monday. Today is Monday. Today is Monday</p>
+    <p> Today is Monday. Today is Monday. Today is Monday</p>
+    <p> Today is Monday. Today is Monday. Today is Monday</p>
+    <p> Today is Monday. Today is Monday. Today is Monday</p>
+    <p> Today is Monday. Today is Monday. Today is Monday</p>
 
 
-
-
-
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-
+    </main>
   </body>
 </html>
