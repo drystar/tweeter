@@ -1,8 +1,9 @@
 header {
   height: 400px;
   width: 100%;
-  align-items: center
-  background-color #e6d412;
+  text-align: center;
+  /* align-items: center */
+  background-color: #fae209;
   background-image: url("https://www.transparenttextures.com/patterns/assault.png");
   /* color: #ffffff */
   position: relative; 
@@ -14,6 +15,7 @@ header img {
   width: 250px;
   height: 250px;
   margin: auto;
+  top: 125px;
   left: 0;
   right: 0;
 }
