@@ -35,13 +35,17 @@ input {
   margin-top: 12px;
 }
 
-span counter {
+span.counter {
   border: 0 solid black;
   box-sizing: border-box;
-  color: blueviolet;
+  color: black;
   display: inline;
   font-family: 'Bungee', sans-serif;
   white-space: pre-wrap;
   word-break: break-word; 
   }
 
+  span.counter.tweetTooLong {
+    /* font-family: inherit; */
+    color: red
+  }
