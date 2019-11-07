@@ -40,9 +40,9 @@ const data = [
 
 const createTweetElement = function (tweet) {
 
-  const $newTweet = $("<article>").addClass("new-tweet");
+  const $newTweet = $("<article>").addClass("tweet");
 console.log("ppp", tweet)
-  const $img = $("img").attr("src", tweet.user.avatars);
+  const $img = $("<img>").attr("src", tweet.user.avatars);
 
   const $name = $("<h4>").addClass("name").text(tweet.user.name);
 
@@ -70,6 +70,7 @@ return $newTweet.append($header).append($content).append($footer)
 //  $('.all-tweets').append($tweet)
 // });
 
+// Note to self: comment out driver code to avoid excess running of createTweet function//bug
 
 // function takes an array of tweets and appends each new tweet to tweeter page 
 $(document).ready(function (){
@@ -80,12 +81,19 @@ $(document).ready(function (){
 
 const renderTweets = function(dataArr) {
   for (const tweet of dataArr) {
-    console.log("sup", tweet)
+   // console.log("sup", tweet)
     const $tweet = createTweetElement(tweet);
     $('section.all-tweets').append($tweet);
   }
 };
 
+$('.new-tweet form').submit( function (event) {
+  event.preventDefault();
+  const $form = $(this);
+  const tweet = $form.serialize();
+  console.log("before ajax");
+  $.ajax({ url: "/tweets/", method: 'POST', data: tweet })
+})
 
 // === Failed Function Breakdown ===
  // const $img = $('<img>').attr('src', tweet.user.avatars);
