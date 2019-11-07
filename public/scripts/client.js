@@ -52,7 +52,7 @@ console.log("ppp", tweet)
 
   const $timeStamp = $("<p>").addClass("timeStamp").text(tweet.created_at);
 
-  const $tweetIcons = $("<p>").addClass("icons").html('<i class="fa fa-flag-o"></i><i class="fas fa-retweet"></i><i class="fa fa-heart-o"></i>');
+  const $tweetIcons = $("<h4>").addClass("icons").html('<i class="fa fa-flag-o"></i><i class="fas fa-retweet"></i><i class="fa fa-heart-o"></i>');
 
 
     const $header = $("<header>").append($img).append($name).append($handle)
