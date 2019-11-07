@@ -1,25 +1,20 @@
 header {
   height: 400px;
   width: 100%;
-  text-align: center;
-  /* align-items: center */
-  background-color: #eda840;
+  background-color: blanchedalmond;
   background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
-  /* color: #ffffff */
   position: relative; 
 }
 
-
 header img {
   position: absolute;
-  width: 250px;
-  height: 250px;
+  width: 275px;
+  height: 275px;
   margin: auto;
   top: 125px;
   left: 0;
   right: 0;
 }
-
 
 header h2 {
   position: absolute;
