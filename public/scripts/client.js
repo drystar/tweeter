@@ -41,7 +41,7 @@ const data = [
 const createTweetElement = function (tweet) {
 
   const $newTweet = $("<article>").addClass("new-tweet");
-
+console.log("ppp", tweet)
   const $img = $("img").attr("src", tweet.user.avatars);
 
   const $name = $("<h4>").addClass("name").text(tweet.user.name);
@@ -63,15 +63,28 @@ return $newTweet.append($header).append($content).append($footer)
  };
 
 
-//   // DRIVER FOR TEST CODE
- $(document).ready(function (){
- const $tweet = createTweetElement(data[0]);
- console.log($tweet);
- $('.all-tweets').append($tweet)
-});
+// //   // DRIVER FOR TEST CODE
+//  $(document).ready(function (){
+//  const $tweet = createTweetElement(data);
+//  console.log($tweet);
+//  $('.all-tweets').append($tweet)
+// });
 
 
+// function takes an array of tweets and appends each new tweet to tweeter page 
+$(document).ready(function (){
+   
+  renderTweets(data);
 
+})
+
+const renderTweets = function(dataArr) {
+  for (const tweet of dataArr) {
+    console.log("sup", tweet)
+    const $tweet = createTweetElement(tweet);
+    $('section.all-tweets').append($tweet);
+  }
+};
 
 
 // === Failed Function Breakdown ===
