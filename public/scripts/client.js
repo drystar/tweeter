@@ -89,15 +89,22 @@ $('.new-tweet form').submit( function (event) {
 
   event.preventDefault();
   const $form = $(this);
-  const data = $form.serialize();
+  const $newTweetP = $form.children('textarea').val();
+  // const data = $form.serialize();
   //console.log("lll", data)
 
-if (tweet.length === 0) {
-  return alert('Nothing to Say???????');
-}else if (tweet.length > 140) {
-  return alert ('Yikes you have too much to say today...');
-}
+if ($newTweetP.length === 0) {
+  //return alert('Nothing to Say???????');
+  $('.new-tweet p').append('Nothing to Say???????')
+  $('.new-tweet p').slideDown();
 
+}else if ($newTweetP.length > 140) {
+  // return alert ('Yikes you have too much to say today...');
+  $('.new-tweet p').append('Yikes you have too much to say today...')
+  $('.new-tweet p').slideDown();
+} else {
+
+$('.new-tweet p').slideUp();
 const serializedForm = $(this).serialize();
 
 
@@ -106,6 +113,7 @@ const serializedForm = $(this).serialize();
   // ajax({ url: "/tweets", method: 'POST', data: tweet })
   $.ajax({ url: "/tweets", method: 'POST', data: serializedForm })
   .then(()=>{loadTweets()})
+}
 })
   // renderTweets(data);
 
