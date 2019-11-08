@@ -83,7 +83,8 @@ $('.new-tweet form').submit( function (event) {
 
   event.preventDefault();
   const $form = $(this);
-  const tweet = $form.serialize();
+  const data = $form.serialize();
+  console.log("lll", data)
 
 if (tweet.length === 0) {
   return alert('Nothing to Say???????');
@@ -97,7 +98,7 @@ const serializedForm = $(this).serialize();
   // console.log("before ajax");
   // $.post('/tweets', tweet)
   // ajax({ url: "/tweets", method: 'POST', data: tweet })
-  ajax({ url: "/tweets", method: 'POST', data: serializedForm })
+  $.ajax({ url: "/tweets", method: 'POST', data: serializedForm })
   .then(()=>{loadTweets()})
 })
   // renderTweets(data);
