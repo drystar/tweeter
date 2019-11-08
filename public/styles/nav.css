@@ -12,3 +12,31 @@ nav {
 #logo {
   font-family: 'Bungee', sans-serif;
 }
+
+#compose-new {
+  margin-left: auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  opacity: 0.8;
+}
+
+#compose-new:hover {
+  cursor: pointer;
+  animation-name: bobble;
+  animation-duration: .5s;
+  /* animation-timing-function: ease-in-out; */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  
+}
+
+button {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-style: none;
+  cursor: pointer;
+ 
+}
