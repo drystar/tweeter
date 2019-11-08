@@ -87,6 +87,15 @@ const renderTweets = function(dataArr) {
   }
 };
 
+const loadTweets = function () {
+  $.ajax('/tweets', { method: 'GET' })
+  .then(function (allTweets) {
+    renderTweets(allTweets);
+  })
+}
+
+loadTweets();
+
 $('.new-tweet form').submit( function (event) {
   event.preventDefault();
   const $form = $(this);
