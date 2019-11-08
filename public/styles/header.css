@@ -24,3 +24,12 @@ header h2 {
   right: 0;
   top: 50%
 }
+
+@media (min-width: 800px) {
+  body > header {
+    width: 30%;
+    float: left;
+    margin: 170px 0px 0px 50px;
+    position: fixed;
+  }
+}
