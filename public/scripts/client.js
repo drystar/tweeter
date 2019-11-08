@@ -50,7 +50,7 @@ console.log("ppp", tweet)
 
   const $content = $("<div>").addClass("content").text(tweet.content.text);
 
-  const $timeStamp = $("<p>").addClass("timeStamp").text(tweet.created_at);
+  const $timeStamp = $("<p>").addClass("timeStamp").text(moment(tweet.created_at).startOf('minute').fromNow());
 
   const $tweetIcons = $("<h4>").addClass("icons").html('<i class="fa fa-flag-o"></i><i class="fas fa-retweet"></i><i class="fa fa-heart-o"></i>');
 
