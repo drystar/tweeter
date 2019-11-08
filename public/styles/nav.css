@@ -38,5 +38,17 @@ button {
   color: #FFFFFF;
   border-style: none;
   cursor: pointer;
- 
+}
+
+@media (max-width: 800px) {
+  nav {
+    background-color: #4056A1;
+  }
+}
+
+
+@media (min-width: 800px) {
+  nav span i{
+    color: #4056A1;
+  }
 }

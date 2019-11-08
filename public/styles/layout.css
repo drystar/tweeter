@@ -31,7 +31,20 @@ main {
   padding-top: 0;
   margin: auto;
   background-color: blanchedalmond;
+  margin: 0px 50px 50px 50px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
+
+
+@media (min-width: 800px) {
+  main{
+    width: 50%;
+    margin: 120px 50px 50px 50px;
+    float: right;
+  }
+} 
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
