@@ -22,6 +22,7 @@
     
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js" integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs=" crossorigin="anonymous"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -34,8 +35,14 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <span id="logo">tweeter</span>
+      <div id="write-button-div">
+        <p><b>Write</b> a new tweet</p>
+        <button type="submit" value="Tweet" id="nav-button"><img src="/images/button-arrows.png"></img></button>
+      </div>
     </nav>
+    </nav>
+
+    <!-- Page-specific (main) content here -->
     <header>
       <div>
           <img src="images/243a1a4a71e53329862ce554a1e78185-sticker.png"> 
@@ -46,12 +53,11 @@
       </div>
   </header>
 
-    <!-- Page-specific (main) content here -->
     <main class="container">
      <section class="new-tweet">
       <h2>Compose Tweet</h2>
      
-      <form action="/tweets/" method="POST"> 
+      <form>
         <textarea name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
         <span class="counter">140</span>
@@ -61,7 +67,7 @@
     <!-- Tweets -->
   
     <section class="all-tweets">
-       <article class="tweet">
+       <!-- <article class="tweet">
         <header class="header">
           <img src="/images/243a1a4a71e53329862ce554a1e78185-sticker.png">
           <h4 class="tweet-name">Newton</h4>
@@ -70,7 +76,6 @@
         <p class="tweet-body">Today is Wednesday.Today is Wednesday.Today is Wednesday.</p> 
         <footer class="tweet-footer">
           <p class="timeStamp">Today</p>
-         <h4 class="tweet-icons">Pin|Retweet|Heart</h4> 
            <h4 class="tweet-icons">
             <i class="fa fa-flag-o"></i>
             <i class="fas fa-retweet"></i>
@@ -78,7 +83,7 @@
           </h4>
 
         </footer>
-      </article> 
+      </article>  -->
 
       <!-- <article class="tweet">
           <header class>
@@ -115,7 +120,23 @@
           </article> -->
 
        </section>
-
+    <p> Today is Wednesday. Today is Wednesday. Today is Wednesday</p>
+    <p> Today is Wednesday. Today is Wednesday. Today is Wednesday</p>
+    <p> Today is Wednesday. Today is Wednesday. Today is Wednesday</p>
+    <p> Today is Wednesday. Today is Wednesday. Today is Wednesday</p> 
+    <p> Today is Wednesday. Today is Wednesday. Today is Wednesday</p>
+    <p> Today is Wednesday. Today is Wednesday. Today is Wednesday</p>
+    <p> Today is Wednesday. Today is Wednesday. Today is Wednesday</p> 
+    
+    <p> Today is Tuesday. Today is Tuesday. Today is Tuesday</p>
+    <p> Today is Tuesday. Today is Tuesday. Today is Tuesday</p>   
+    <p> Today is Tuesday. Today is Tuesday. Today is Tuesday</p>
+    <p> Today is Tuesday. Today is Tuesday. Today is Tuesday</p>
+    <p> Today is Tuesday. Today is Tuesday. Today is Tuesday</p>
+    <p> Today is Tuesday. Today is Tuesday. Today is Tuesday</p>   
+    <p> Today is Tuesday. Today is Tuesday. Today is Tuesday</p>
+    <p> Today is Tuesday. Today is Tuesday. Today is Tuesday</p>
+   
     <p> Today is Monday. Today is Monday. Today is Monday</p>
     <p> Today is Monday. Today is Monday. Today is Monday</p>
     <p> Today is Monday. Today is Monday. Today is Monday</p>
@@ -123,13 +144,6 @@
     <p> Today is Monday. Today is Monday. Today is Monday</p>
     <p> Today is Monday. Today is Monday. Today is Monday</p>
     <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p>
-    <p> Today is Monday. Today is Monday. Today is Monday</p> -->
-
 
     </main>
   </body>
