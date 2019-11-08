@@ -75,16 +75,29 @@ return $newTweet.append($header).append($content).append($footer)
 // function takes an array of tweets and appends each new tweet to tweeter page 
 $(document).ready(function (){
    
-
   loadTweets();
 
 $('.new-tweet form').submit( function (event) {
+
+  const tweet = $('textarea').val();
+
   event.preventDefault();
   const $form = $(this);
   const tweet = $form.serialize();
+
+if (tweet.length === 0) {
+  return alert('Nothing to Say???????');
+}else if (tweet.length > 140) {
+  return alert ('Yikes you have too much to say today...');
+}
+
+const serializedForm = $(this).serialize();
+
+
   // console.log("before ajax");
-  $.post('/tweets', tweet)
-  //ajax({ url: "/tweets", method: 'POST', data: tweet })
+  // $.post('/tweets', tweet)
+  // ajax({ url: "/tweets", method: 'POST', data: tweet })
+  ajax({ url: "/tweets", method: 'POST', data: serializedForm })
   .then(()=>{loadTweets()})
 })
   // renderTweets(data);
