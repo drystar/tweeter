@@ -75,6 +75,12 @@ return $newTweet.append($header).append($content).append($footer)
 // function takes an array of tweets and appends each new tweet to tweeter page 
 $(document).ready(function (){
    
+// function to toggle the new tweet
+$('#compose-new button').click(function () {
+  $('section.new-tweet').slideToggle("slow");
+  $('section.new-tweet textarea').focus();
+})
+  
   loadTweets();
 
 $('.new-tweet form').submit( function (event) {
