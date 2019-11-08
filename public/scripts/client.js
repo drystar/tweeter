@@ -75,7 +75,19 @@ return $newTweet.append($header).append($content).append($footer)
 // function takes an array of tweets and appends each new tweet to tweeter page 
 $(document).ready(function (){
    
-  renderTweets(data);
+
+  loadTweets();
+
+$('.new-tweet form').submit( function (event) {
+  event.preventDefault();
+  const $form = $(this);
+  const tweet = $form.serialize();
+  // console.log("before ajax");
+  $.post('/tweets', tweet)
+  //ajax({ url: "/tweets", method: 'POST', data: tweet })
+  .then(()=>{loadTweets()})
+})
+  // renderTweets(data);
 
 })
 
@@ -83,26 +95,20 @@ const renderTweets = function(dataArr) {
   for (const tweet of dataArr) {
    // console.log("sup", tweet)
     const $tweet = createTweetElement(tweet);
-    $('section.all-tweets').append($tweet);
+    $('.all-tweets').append($tweet);
   }
 };
 
 const loadTweets = function () {
-  $.ajax('/tweets', { method: 'GET' })
-  .then(function (allTweets) {
-    renderTweets(allTweets);
+  //$.get('/tweets')
+  $.ajax({ url: "/tweets/", method: 'GET' })
+  .then(function (dataArr) {
+    renderTweets(dataArr);
+  
+    $('.all-tweets').prepend(dataArr);
   })
 }
 
-loadTweets();
-
-$('.new-tweet form').submit( function (event) {
-  event.preventDefault();
-  const $form = $(this);
-  const tweet = $form.serialize();
-  console.log("before ajax");
-  $.ajax({ url: "/tweets/", method: 'POST', data: tweet })
-})
 
 // === Failed Function Breakdown ===
  // const $img = $('<img>').attr('src', tweet.user.avatars);
