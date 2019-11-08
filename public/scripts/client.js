@@ -84,7 +84,7 @@ $('.new-tweet form').submit( function (event) {
   event.preventDefault();
   const $form = $(this);
   const data = $form.serialize();
-  console.log("lll", data)
+  //console.log("lll", data)
 
 if (tweet.length === 0) {
   return alert('Nothing to Say???????');
@@ -106,20 +106,21 @@ const serializedForm = $(this).serialize();
 })
 
 const renderTweets = function(dataArr) {
+  $('.all-tweets').empty();
   for (const tweet of dataArr) {
    // console.log("sup", tweet)
     const $tweet = createTweetElement(tweet);
-    $('.all-tweets').append($tweet);
+    $('.all-tweets').prepend($tweet);
   }
 };
 
 const loadTweets = function () {
   //$.get('/tweets')
-  $.ajax({ url: "/tweets/", method: 'GET' })
+  $.ajax({ url: "/tweets", method: 'GET' })
   .then(function (dataArr) {
     renderTweets(dataArr);
   
-    $('.all-tweets').prepend(dataArr);
+   // $('.all-tweets').prepend(dataArr);
   })
 }
 
