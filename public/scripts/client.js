@@ -1,3 +1,9 @@
+/*
+ * Client-side JS logic goes here
+ * jQuery is already loaded
+ * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+ */
+
 
 // create a new tweet article from user input
   const createTweetElement = function (tweet) {
@@ -24,7 +30,6 @@
 
  };
 
- //jQuery loaded 
  $(document).ready(function (){
 
 // function to take in an array of tweets and append each new tweet "all-tweets' container of tweeter page 
@@ -32,18 +37,17 @@
 
    
 // function activated when new tweet composed || toggles and focuses the text area 
-$('#compose-new button').click(function () {
+$('.new-tweet').hide();
+ $('#compose-new button').click(function () {
   $('section.new-tweet').slideToggle("slow");
-  $('section.new-tweet textarea').focus();
+   $('section.new-tweet textarea').focus();
 })
   
   loadTweets();
 
 
-// screens for invalid tweets || presents error messages to user if invalid || makes a POST requestif no errors
+// screens for invalid tweets || presents error messages to user if invalid || makes a POST request if no errors || refreshes test area and resets tweet character counter
 $('.new-tweet form').submit( function (event) {
-
-  const tweet = $('textarea').val();
 
   event.preventDefault();
   $('new-tweet p').empty().slideUp();
@@ -53,7 +57,9 @@ $('.new-tweet form').submit( function (event) {
 if ($newTweetP.length === 0) {
   
   $('.new-tweet p').text('⚠️⚠️ Nothing to Say????? ⚠️⚠️')
+  setTimeout(()=> {
   $('.new-tweet p').slideDown("slow");
+  }, 750);
 
 } else if ($newTweetP.length > 140) {
   
@@ -64,17 +70,20 @@ if ($newTweetP.length === 0) {
 
   $('.new-tweet p').slideUp("fast");
   const serializedForm = $(this).serialize();
-    // data: serializedForm
-    // function(data) {
-    //   $('.all-tweets').prepend(createTweetElement(data))
-    //   $('textarea').val('');
-    //   $('.counter').text(140)
-    //   })
-    // });
 
-  $.ajax({ url: "/tweets", method: 'POST', data: serializedForm })
+   $.ajax({ url: "/tweets", method: 'POST', data: serializedForm })
   .then(()=>{loadTweets()})
-}
+
+   .then (function(allTweetsArr) {
+    $form[0].reset();
+    $form.children('span').text(140);
+    
+    const latestTweet = [allTweetsArr[allTweetsArr.length - 1]];
+    renderTweets(latestTweet);
+
+    })
+ 
+  }
 })
 
 })
