@@ -4,6 +4,7 @@ header {
   background-color: coral;
   background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
   position: relative; 
+
 }
 
 header img {
@@ -12,7 +13,7 @@ header img {
   height: 275px;
   margin: auto;
   top: 125px;
-  left: 0;
+  left: 12px;
   right: 0;
 }
 

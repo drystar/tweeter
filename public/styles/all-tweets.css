@@ -20,7 +20,7 @@ article.tweet {
 
  article.tweet:hover {
    box-shadow: 3px 2px 10px 4px #4674ab;
-   opacity: 1;
+   opacity: 0.8;
    cursor: pointer;
  }
 
@@ -74,8 +74,6 @@ article.tweet footer {
   color:#0e0d0d;
   margin-right: 10px;
   margin-left: 10px;
-  /* display: flex;
-  flex-direction: row; */
  }
 
  article.tweet footer p {
@@ -87,8 +85,20 @@ article.tweet footer {
 
  article.tweet footer h4 {
   font-size: 15px;
+  color:transparent;
+  margin: 10px;
+  float: right;
+ }
+
+ article.tweet:hover footer h4 {
+  font-size: 15px;
   color:#0e0d0d;
   margin: 10px;
   float: right;
  }
 
+ /* article.tweet footer h4:hover {
+  font-size: 15px;
+  color: transparent;
+  margin: 10px;
+ } */
