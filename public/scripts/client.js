@@ -31,7 +31,7 @@
 
 
    
-// function to toggle the new tweet
+// function activated when new tweet composed || toggles and focuses the text area 
 $('#compose-new button').click(function () {
   $('section.new-tweet').slideToggle("slow");
   $('section.new-tweet textarea').focus();
@@ -39,11 +39,11 @@ $('#compose-new button').click(function () {
   
   loadTweets();
 
-// screens for invalid tweets
 
+// screens for invalid tweets || presents error messages to user if invalid || makes a POST requestif no errors
 $('.new-tweet form').submit( function (event) {
 
-  const event = $('textarea').val();
+  const tweet = $('textarea').val();
 
   event.preventDefault();
   const $form = $(this);
@@ -54,10 +54,11 @@ if ($newTweetP.length === 0) {
   $('.new-tweet p').append('⚠️⚠️ Nothing to Say????? ⚠️⚠️')
   $('.new-tweet p').slideDown("slow");
 
-}else if ($newTweetP.length > 140) {
+} else if ($newTweetP.length > 140) {
   
   $('.new-tweet p').append('🚫🚫 Yikes you have too much to say today... 🚫🚫')
   $('.new-tweet p').slideDown("slow");
+
 } else {
 
   $('.new-tweet p').slideUp("fast");
@@ -70,8 +71,6 @@ if ($newTweetP.length === 0) {
     //   })
     // });
 
-
-  //  
   $.ajax({ url: "/tweets", method: 'POST', data: serializedForm })
   .then(()=>{loadTweets()})
 }
@@ -88,7 +87,7 @@ const renderTweets = function(dataArr) {
   }
 };
 
-// load tweets without refreshing the page 
+// makes a GET request to tweet database || load tweets without refreshing the page 
 const loadTweets = function () {
   $.ajax({ url: "/tweets", method: 'GET' })
   .then(function (dataArr) {
