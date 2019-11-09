@@ -70,7 +70,7 @@ article.tweet footer {
   height: 60px;
   border-style: none;
   border-top-style: solid;
-  border-width: thick;
+  border-width: 3px;
   color:#0e0d0d;
   margin-right: 10px;
   margin-left: 10px;
