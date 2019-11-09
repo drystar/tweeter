@@ -46,17 +46,18 @@ $('.new-tweet form').submit( function (event) {
   const tweet = $('textarea').val();
 
   event.preventDefault();
+  $('new-tweet p').empty().slideUp();
   const $form = $(this);
   const $newTweetP = $form.children('textarea').val();
  
 if ($newTweetP.length === 0) {
   
-  $('.new-tweet p').append('⚠️⚠️ Nothing to Say????? ⚠️⚠️')
+  $('.new-tweet p').text('⚠️⚠️ Nothing to Say????? ⚠️⚠️')
   $('.new-tweet p').slideDown("slow");
 
 } else if ($newTweetP.length > 140) {
   
-  $('.new-tweet p').append('🚫🚫 Yikes you have too much to say today... 🚫🚫')
+  $('.new-tweet p').text('🚫🚫 Yikes you have too much to say today... 🚫🚫')
   $('.new-tweet p').slideDown("slow");
 
 } else {
