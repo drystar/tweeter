@@ -20,7 +20,7 @@ article.tweet {
  article.tweet header {
   height: 50px;
   position: relative;
-  margin-top: 50px;
+  margin-top: 10px;
   margin: 0;
   height: 50px;
   display: flex;
@@ -51,8 +51,12 @@ article.tweet header h4 {
   font-weight: 400;
 }
 
-article.tweet div {
+article.tweet div.content {
   padding-left: 10px;
+  margin-left: 18px;
+  margin-bottom: 20px;
+  height: 30px;
+  word-wrap: break-word;
 }
 
 article.tweet header p {
