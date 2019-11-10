@@ -8,7 +8,7 @@ Lighthouse Labs provided the starter code for the project: which was built upon 
 
 img src="images/243a1a4a71e53329862ce554a1e78185-sticker.png
 
-!["character count limit - mobile800](img src="images/char-count-800.png")
+!["character count limit - mobile800](https://github.com/drystar/tweeter/blob/master/docs/char-count-800.png?raw=true)
 !["invalid tweet action - desktop"](img src="images/erro-validation desk.png")
 !["hover tweet/ icons - mobile800"](img src="images/hover tweet-icons mobile.png")
 
