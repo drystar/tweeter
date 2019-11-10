@@ -1,36 +1,55 @@
 header {
-  height: 400px;
+  /* height: 400px; */
   width: 100%;
   background-color: coral;
   background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
-  position: relative; 
-
+  margin-top: 120px;
+  padding: 11px;
+  display: flex;
+  flex-direction: column;
+  /* position: absolute; */
+  /* align-content: center; */
+  align-items: center;
+  justify-content: center;
 }
 
-header img {
+header div.h2 {
+  margin: 5px;
   position: absolute;
-  width: 275px;
-  height: 275px;
-  margin: auto;
-  top: 125px;
-  left: 12px;
-  right: 0;
+  /* position: relative; */
+  /* width: 275px; */
+  /* height: 275px; */
+  /* top: 120px; */
+  /* justify-content: center; */
+  /* text-align: center; */
+  /* margin: auto */
+  /* left: 12px; */
+  /* right: 0; */
 }
 
-header h2 {
-  position: absolute;
-  text-align: center;
-  margin: 140px;
-  left: 0;
-  right: 0;
-  top: 50%
+header.div h2 {
+  margin: 5px;
+  position: relative;
+  /* position: absolute; */
+  /* text-align: center; */
+  /* margin: 140px; */
+  /* left: -160px; */
+  /* right: 0; */
+  /* top: 50% */
+  /* margin-top: 125px; */
+  /* font-family: 'Source Sans Pro', sans-serif; */
+}
+
+header div {
+  /* margin-top: 10% */
+margin: 10%;
 }
 
 @media (min-width: 800px) {
   body > header {
-    width: 30%;
+    width: 30vw;
     float: left;
-    margin: 170px 0px 0px 50px;
+    margin: 170px 0px 170px 50px;
     position: fixed;
   }
 }

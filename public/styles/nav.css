@@ -2,11 +2,18 @@ nav {
   position: fixed;
   height: 120px;
   width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: #4056A1;
-  color: #FFF;
-  z-index: 1;
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 1.5em
+  background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png');
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 100;
+  /* font-family: 'Source Sans Pro', sans-serif;
+  padding: 1.5em; */
 }
 
 #logo {
@@ -14,40 +21,57 @@ nav {
 }
 
 #compose-new {
-  margin-left: auto;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #FFFFFF;
-  display: flex;
+  /* margin-left: auto; */
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  /* color: #FFFFFF; */
+  /* display: flex; */
   flex-direction: column;
-  float: right;
+  display: flex;
+  /* float: right; */
   opacity: 0.8;
 }
 
 #compose-new:hover {
   cursor: pointer;
   animation-name: bobble;
-  animation-duration: .5s;
-  /* animation-timing-function: ease-in-out; */
+  animation-duration: .75s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  
 }
 
 button {
   background-color: transparent;
-  color: #FFFFFF;
+  color: coral;
   border-style: none;
   cursor: pointer;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  /* 25% {transform: translateY(7px);} */
+  50% {
+    transform: translateY(10px);
+  }
+  /* 75% {transform: translateY(7px);} */
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 800px) {
   nav {
     background-color: #4056A1;
+    background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png');
   }
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 799px) {
   nav span i{
     color: #4056A1;
   }
