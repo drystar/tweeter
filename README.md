@@ -1,3 +1,6 @@
+                                                                                             # tweeter-project
+                                                                                   LHL: W4: tweeter Assignment
+
 # Tweeter Project
 
 Tweeter is a simple, single-page Twitter clone.
@@ -6,14 +9,16 @@ Lighthouse Labs provided the starter code for the project: which was built upon 
 
 ## Final Product
 
+
+## shows tweet container & icons when hovering over the tweet
+!["hover tweet/ icons"](https://github.com/drystar/tweeter/blob/master/docs/hover%20tweet-icons%20mobile.png?raw=true)
+
 ## illustrates how many characters over the 140 limit have been typed in red 
 !["character count limit - mobile800](https://github.com/drystar/tweeter/blob/master/docs/char-count-800.png?raw=true)
 
 ## displays an invalid tweet error message 
 !["invalid tweet action"](https://github.com/drystar/tweeter/blob/master/docs/erro-validation%20desk.png?raw=true)
 
-## shows tweet container & icons when hovering over the tweet
-!["hover tweet/ icons"](https://github.com/drystar/tweeter/blob/master/docs/hover%20tweet-icons%20mobile.png?raw=true)
 
 ## Getting Started
 
