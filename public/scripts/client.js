@@ -59,7 +59,7 @@ if ($newTweetP.length === 0) {
   $('.new-tweet p').text('⚠️⚠️ Nothing to Say????? ⚠️⚠️')
   $('.new-tweet p').slideDown("slow");
 
-} else if ($newTweetP.length > 140) {
+} else if ($newTweetP.length >= 140) {
   
   $('.new-tweet p').text('🚫🚫 Yikes you have too much to say today... 🚫🚫')
   $('.new-tweet p').slideDown("slow");
