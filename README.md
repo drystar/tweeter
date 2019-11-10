@@ -6,11 +6,14 @@ Lighthouse Labs provided the starter code for the project: which was built upon 
 
 ## Final Product
 
-img src="images/243a1a4a71e53329862ce554a1e78185-sticker.png
-
+## illustrates how many characters over the 140 limit have been typed in red 
 !["character count limit - mobile800](https://github.com/drystar/tweeter/blob/master/docs/char-count-800.png?raw=true)
-!["invalid tweet action - desktop"](img src="images/erro-validation desk.png")
-!["hover tweet/ icons - mobile800"](img src="images/hover tweet-icons mobile.png")
+
+## displays an invalid tweet error message 
+!["invalid tweet action"](https://github.com/drystar/tweeter/blob/master/docs/erro-validation%20desk.png?raw=true)
+
+## shows tweet container & icons when hovering over the tweet
+!["hover tweet/ icons"](https://github.com/drystar/tweeter/blob/master/docs/hover%20tweet-icons%20mobile.png?raw=true)
 
 ## Getting Started
 
