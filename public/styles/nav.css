@@ -12,12 +12,16 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   z-index: 100;
-  /* font-family: 'Source Sans Pro', sans-serif;
-  padding: 1.5em; */
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  padding: 1.5em;
 }
 
 #logo {
   font-family: 'Bungee', sans-serif;
+  top: 50px;
+  left: 15%;
+  font-size: 32pt;
+  /* padding: 20px 25px; */
 }
 
 #compose-new {
@@ -27,6 +31,9 @@ nav {
   /* display: flex; */
   flex-direction: column;
   display: flex;
+  /* padding-right: 50px; */
+  /* padding-top: 25px; */
+  bottom: 0;
   /* float: right; */
   opacity: 0.8;
 }

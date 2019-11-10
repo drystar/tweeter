@@ -36,7 +36,7 @@
 
 
    
-// function activated when new tweet composed || toggles and focuses the text area 
+// function activated when new tweet composed || toggles and focuses the text area || hide form until click
 $('.new-tweet').hide();
  $('#compose-new button').click(function () {
   $('section.new-tweet').slideToggle("slow");
@@ -57,9 +57,7 @@ $('.new-tweet form').submit( function (event) {
 if ($newTweetP.length === 0) {
   
   $('.new-tweet p').text('⚠️⚠️ Nothing to Say????? ⚠️⚠️')
-  setTimeout(()=> {
   $('.new-tweet p').slideDown("slow");
-  }, 750);
 
 } else if ($newTweetP.length > 140) {
   
