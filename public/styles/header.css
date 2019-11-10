@@ -1,5 +1,5 @@
 header {
-  /* height: 400px; */
+  height: 400px;
   width: 100%;
   background-color: coral;
   background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
@@ -7,41 +7,26 @@ header {
   padding: 11px;
   display: flex;
   flex-direction: column;
-  /* position: absolute; */
-  /* align-content: center; */
   align-items: center;
   justify-content: center;
 }
 
-header div.h2 {
+div img {
   margin: 5px;
-  position: absolute;
-  /* position: relative; */
-  /* width: 275px; */
-  /* height: 275px; */
-  /* top: 120px; */
-  /* justify-content: center; */
-  /* text-align: center; */
-  /* margin: auto */
-  /* left: 12px; */
-  /* right: 0; */
+  width: 350px; 
+  height: 350px;
+  padding-left: 28px;
+  margin-bottom: -45px;
 }
 
-header.div h2 {
+div h2 {
   margin: 5px;
-  position: relative;
-  /* position: absolute; */
-  /* text-align: center; */
-  /* margin: 140px; */
-  /* left: -160px; */
-  /* right: 0; */
-  /* top: 50% */
-  /* margin-top: 125px; */
-  /* font-family: 'Source Sans Pro', sans-serif; */
+  text-align: center;
+  color: whitesmoke;
+  text-shadow: 1px 2px 3px #666;
 }
 
 header div {
-  /* margin-top: 10% */
 margin: 10%;
 }
 

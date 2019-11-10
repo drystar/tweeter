@@ -27,12 +27,8 @@ body {
 
 main {
   width: 90%;
-  /* text-align: center; */
   padding-top: 0;
-  /* margin: auto; */
   background-color: blanchedalmond;
-  /* margin-right: auto;
-  margin-left: auto; */
   align-items: center;
   display: flex;
   flex-direction: column;

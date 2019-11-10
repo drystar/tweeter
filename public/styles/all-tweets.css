@@ -1,8 +1,11 @@
+section.all-tweets {
+  width: 100%;
+}
+
 article.tweet {
   width: 100%;
   height: 150px;
   margin-top: 40px;
-  /* margin: 20px; */
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
@@ -10,13 +13,11 @@ article.tweet {
   border-width: 3px;
   color: #444141;
   background-color: blanchedalmond;
-  /* padding: 10px, 20px; */
   opacity: 0.8;
   font-family: 'Source Sans Pro', sans-serif;
  }
 
  article.tweet header {
-  /* margin-bottom: 12px; */
   height: 50px;
   position: relative;
   margin-top: 50px;
@@ -36,31 +37,18 @@ article.tweet {
 
  article.tweet img {
   position: absolute;
-  /* width: 40px; */
   height: 40px;
   left: 10px;
-  /* top: 3px; */
-  /* margin-left: -5px; */
   padding: 3px
 }
-
- /* article.tweet-name header {
-  position: relative;
-  color: #0e0d0d;
-  background-color: blanchedalmond;
-  height: 40px;
-  /* top: 20px; */
-  /* right: 80px; */
-/* } */ 
 
 article.tweet header h4 {
   position: relative;
   color:#0e0d0d;
   background-color: blanchedalmond;
   top: -0;
-  left: 55px;
-  font-weight: 400
-  ;
+  left: 44px;
+  font-weight: 400;
 }
 
 article.tweet div {
@@ -114,9 +102,3 @@ article.tweet footer {
   margin: 10px;
   float: right;
  }
-
- /* article.tweet footer h4:hover {
-  font-size: 15px;
-  color: transparent;
-  margin: 10px;
- } */
